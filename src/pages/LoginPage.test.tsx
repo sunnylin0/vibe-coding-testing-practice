@@ -102,7 +102,7 @@ describe('LoginPage Test', () => {
             fireEvent.change(screen.getByLabelText('密碼'), { target: { value: '12345678' } });
             fireEvent.click(screen.getByRole('button', { name: '登入' }));
 
-            expect(screen.getByText('密碼必須包含英文字母和數字123124')).toBeInTheDocument();
+            expect(screen.getByText('密碼必須包含英文字母和數字')).toBeInTheDocument();
             expect(defaultAuthContext.login).not.toHaveBeenCalled();
         });
     });
